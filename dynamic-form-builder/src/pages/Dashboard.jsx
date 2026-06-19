@@ -3,7 +3,7 @@ import Layout from "../components/Layout";
 import axios from "axios";
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
-const [loading, setLoading] = useState(true);
+
 
 function Dashboard() {
 
@@ -43,6 +43,8 @@ const fetchForms = async () => {
       }
     );
 
+    console.log("Dashboard Forms:", res.data);
+
     setForms(
       Array.isArray(res.data)
         ? res.data
@@ -50,8 +52,6 @@ const fetchForms = async () => {
     );
   } catch (err) {
     console.error(err);
-  } finally {
-    setLoading(false);
   }
 };
 
@@ -519,11 +519,7 @@ const userName = user?.name || "User";
               <Link to="/my-forms" className="panel-link">View All</Link>
             </div>
 
-            {  loading ? (
-  <div className="text-center py-10">
-    <h2>Loading Forms...</h2>
-  </div>
-) :  forms.length === 0 ? (
+            {forms.length === 0 ? (
               <div className="empty-state">
                 <div className="empty-icon">
                   <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
@@ -542,7 +538,7 @@ const userName = user?.name || "User";
             ) : (
               <div className="form-list">
                 {forms.slice(-5).reverse().map((form) => (
-                  <div key={form._id} className="form-row">
+                  <div key={form.id} className="form-row">
                     <div className="form-info">
                       <h3 className="form-title">{form.title || "Untitled Form"}</h3>
                       <p className="form-desc">{form.description || "No description"}</p>
