@@ -29,11 +29,12 @@ function App() {
       <Routes>
 
         {/* DEFAULT ROUTE */}
-      
+            
 <Route
   path="/"
   element={<Navigate to="/signup" replace />}
 />
+
         {/* AUTH ROUTES */}
         <Route
           path="/login"
