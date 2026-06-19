@@ -546,10 +546,10 @@ const userName = user?.name || "User";
                     </div>
 
                     <div className="form-row-actions">
-                      <Link to={`/form/${form.id}`} className="form-btn form-btn-open">
+                      <Link to={`/form/${form._id}`} className="form-btn form-btn-open">
                         Open
                       </Link>
-                      <Link to={`/responses/${form.id}`} className="form-btn form-btn-responses">
+                      <Link to={`/responses/${form._id}`} className="form-btn form-btn-responses">
                         Responses
                       </Link>
                     </div>
