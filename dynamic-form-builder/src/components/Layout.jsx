@@ -167,12 +167,7 @@ const themes = {
 
         {/* LOGOUT */}
 
-        <button
-          onClick={logout}
-          className="w-full mt-10 bg-red-500 hover:bg-red-600 px-5 py-3 rounded-xl font-bold"
-        >
-          Logout
-        </button>
+       
 
       </div>
 
