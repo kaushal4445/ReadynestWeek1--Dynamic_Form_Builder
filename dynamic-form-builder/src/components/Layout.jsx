@@ -1,3 +1,6 @@
+import { useNavigate } from "react-router-dom";
+
+const navigate = useNavigate();
 import {
   Link,
   useLocation,
@@ -56,15 +59,14 @@ const themes = {
     },
   ];
 
-  const logout = () => {
 
-    localStorage.removeItem(
-      "isLoggedIn"
-    );
+const logout = () => {
+  localStorage.removeItem("token");
+  localStorage.removeItem("user");
+  localStorage.removeItem("isLoggedIn");
 
-    window.location.href =
-      "/login";
-  };
+  navigate("/signup");
+};
 
   return (
 
