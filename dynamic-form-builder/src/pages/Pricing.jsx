@@ -22,7 +22,7 @@ function Pricing() {
 const handleDemoPayment = async () => {
   try {
     const { data: order } = await axios.post(
-      "http://localhost:5000/api/payment/create-order"
+      "https://form-builder-backend-bdv0.onrender.com/api/payment/create-order"
     );
 
     const options = {

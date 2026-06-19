@@ -27,7 +27,7 @@ function Analytics() {
       const token = localStorage.getItem("token");
 
       const res = await axios.get(
-        "http://localhost:5000/api/forms",
+        "https://form-builder-backend-bdv0.onrender.com/api/forms",
         {
           headers: {
             Authorization: `Bearer ${token}`,

@@ -12,7 +12,7 @@ function Login() {
     try {
       setLoading(true);
 
-      const res = await axios.post("http://localhost:5000/api/auth/login", {
+      const res = await axios.post("https://form-builder-backend-bdv0.onrender.com/api/auth/login", {
         email,
         password,
       });

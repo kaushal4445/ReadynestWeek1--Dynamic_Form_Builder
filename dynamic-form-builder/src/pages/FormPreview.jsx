@@ -18,7 +18,7 @@ const fetchForm = async () => {
     const token = localStorage.getItem("token");
 
     const res = await axios.get(
-      `http://localhost:5000/api/forms/${id}`,
+      `https://form-builder-backend-bdv0.onrender.com/api/forms/${id}`,
       {
         headers: {
           Authorization: `Bearer ${token}`,
