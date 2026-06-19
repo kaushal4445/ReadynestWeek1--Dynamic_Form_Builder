@@ -1,6 +1,3 @@
-import { useNavigate } from "react-router-dom";
-
-const navigate = useNavigate();
 import {
   Link,
   useLocation,
@@ -59,14 +56,15 @@ const themes = {
     },
   ];
 
+  const logout = () => {
 
-const logout = () => {
-  localStorage.removeItem("token");
-  localStorage.removeItem("user");
-  localStorage.removeItem("isLoggedIn");
+    localStorage.removeItem(
+      "isLoggedIn"
+    );
 
-  navigate("/signup");
-};
+    window.location.href =
+      "/login";
+  };
 
   return (
 
