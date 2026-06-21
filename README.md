@@ -42,16 +42,7 @@ This project was developed as part of my **Full Stack Development Internship at 
 ---
 
 
-## 📸 Screenshots
 
-### Signup Page
-<img src="./screenshots/signup.png" width="100%" />
-
-### Dashboard
-<img src="./screenshots/dashboard.png" width="100%" />
-
-### Create Form
-<img src="./screenshots/creayeform.png" width="100%" />
 
 ---
 
